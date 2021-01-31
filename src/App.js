@@ -5,6 +5,8 @@ import Banner from './Banner';
 import requests from './request';
 import Nav from './Nav';
 function App() {
+
+  console.log("Hanya untuk TUJUAN EDUKASI *** FOR EDUCATION PURPOSE ONLY **** ini adalah netflix clone dibuat di akhir januari 2021 oleh @yodagunawan yang merupakan hasil pembelajaran  dari clever programer youtube channel ");
   return (
     <div className="App">
     <Nav/>
