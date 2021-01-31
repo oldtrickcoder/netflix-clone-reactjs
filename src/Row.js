@@ -31,28 +31,26 @@ function Row({title, fetchUrl, isLargeRow}) {
     };
     
     const handleClick = async(movie) => {
-     if(trailerUrl){
-         setTrailerUrl('');
-         console.log(trailerUrl);
-         console.log("ada trailerURL");
-     }else{
-         movieTrailer(movie?.name || "")
-            .then((url)=>{
-                console.log(movie?.name || "")
-                // console.log(url);
-                // console.log(trailerUrl);
-                // console.log(urlParams);
-                console.log("tidak ada trailer url");
-                // console.table(movies);
-                const urlParams = new URLSearchParams(new URL(url).search)		
-                setTrailerUrl(urlParams.get('v'))
-               
-                
-            })
-            .catch(error => console.log(error))
-     }
-    }
-    
+        console.table(movie);
+        console.log(movie.title || movie.name);
+     
+        movieTrailer(movie?.title|| movie?.name)
+        .then(
+            (url)=>{
+                const x = new URL(url).search;
+                if(x!==""){
+                    const urlParams = new URLSearchParams(x);
+                    console.log(`https://www.youtube.com/watch${x}`);
+                    setTrailerUrl(urlParams.get('v'));
+                }else{
+                    console.log("trailer perlu dicari");
+                }
+            }
+            
+            ).catch(error => console.log(error))
+   
+       }
+       
 
     // console.table(movies);
     return (
