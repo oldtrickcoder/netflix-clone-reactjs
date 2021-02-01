@@ -6,6 +6,9 @@
 .pnp.js
 Catetan.txt
 .env
+/.firebase
+.firebaserc
+firebase.json
 
 # testing
 /coverage

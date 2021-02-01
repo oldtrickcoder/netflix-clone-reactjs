@@ -37,3 +37,17 @@
     transform: scale(1.09);
     opacity: 1;
 }
+
+@media screen and (max-width:400px){
+    .row{
+        margin-left: 20px;
+        color: white;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:350px){
+    .row{
+        width: 110vw;
+    }
+  }
